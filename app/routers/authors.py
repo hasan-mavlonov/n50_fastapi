@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException, Depends
 from sqlmodel import select
-from app.database import SessionDep
-from app.models import Author
-from app.schemas import AuthorIn, AuthorOut, AuthorUpdate
+from app.core.database import SessionDep
+from app.core.models import Author
+from app.schemas.authors import AuthorIn, AuthorOut, AuthorUpdate
 
 router = APIRouter(
     tags=['authors'],
